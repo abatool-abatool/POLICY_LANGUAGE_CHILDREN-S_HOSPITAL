@@ -47,63 +47,6 @@
 				</context>
 			</case>
 		</rule>
-		<rule>
-			<rule-name>Monitor-Shelves</rule-name>
-			<device-type>Actuators</device-type>
-			<case>
-				<device>Smart-Robot</device>
-				<context>
-					<situation-dependencies>
-						<case>
-							<situation>occupied</situation>
-							<action>Inform-Owner</action>	
-						</case>
-						<case>
-							<situation>vaccant</situation>
-							<action>Report-Owner</action>	
-						</case>
-					</situation-dependencies>
-				</context>
-			</case>
-		</rule>
-		<rule>
-			<rule-name>Manage-Online-Orders</rule-name>
-			<device-type>Actuators</device-type>
-			<case>
-				<device>Smart-Robot</device>
-				<context>
-					<situation-dependencies>
-						<case>
-							<situation>few-orders</situation>
-							<action>Complete-Orders-Subsequently</action>
-						</case>
-						<case>
-							<situation>multiple-orders</situation>
-							<action>Invite-Second-Robot</action>
-						</case>
-					</situation-dependencies>
-				</context>
-			</case>
-		</rule>
-		<rule>
-			<rule-name>Enlist-Product-Prices</rule-name>
-			<device-type>Actuators</device-type>
-			<case>
-				<device>Smart-Robot</device>
-				<context>
-					<situation-dependencies>
-						<case>
-							<situation>crowded</situation>
-							<action>Display-Message</action>
-						</case>
-						<case>
-							<situation>vaccant</situation>
-							<action>Say-Price-Using-Voice</action>
-						</case>
-					</situation-dependencies>
-				</context>
-			</case>
-		</rule>
 	</authorisation-rules>
 	<obligation-rules id="R2">
 		<rule>
@@ -158,25 +101,6 @@
 						<case>
 							<situation>obstacle</situation>
 							<action>Alter-Path</action>	
-						</case>
-					</situation-dependencies>
-				</context>
-			</case>
-		</rule>
-		<rule>
-			<rule-name>Be-Attentive</rule-name>
-			<device-type>Actuators</device-type>
-			<case>
-				<device>Smart-Robot</device>
-				<context>
-					<situation-dependencies>
-						<case>
-							<situation>registered-user</situation>
-							<action>Recognise-Face</action>	
-						</case>
-						<case>
-							<situation>unregistered-user</situation>
-							<action>Display-Message</action>	
 						</case>
 					</situation-dependencies>
 				</context>
