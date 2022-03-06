@@ -85,25 +85,6 @@
 	</authorisation-rules>
 	<obligation-rules id="R2">
 		<rule>
-			<rule-name>Be-Privacy-Respecting</rule-name>
-			<device-type>Actuators</device-type>
-			<case>
-				<device>Smart-Robot</device>
-				<context>
-					<situation-dependencies>
-						<case>
-							<situation>indoor-location</situation> 
-							<action>Display-Question</action> 
-						</case>
-						<case>
-							<situation>outdoor-location</situation>
-							<action>Ask-Question-Using-Voice</action>
-						</case>
-					</situation-dependencies>
-				</context>
-			</case>
-		</rule>
-		<rule>
 			<rule-name>Be-Respectful</rule-name>
 			<device-type>Actuators</device-type>
 			<case>
@@ -174,6 +155,10 @@
 						<case>
 							<situation>multiple-requests</situation>
 							<action>Invite-Next-Robot</action>
+						</case>
+						<case>
+							<situation>network-disconnection</situation>
+							<action>Report-Staff</action>
 						</case>
 					</situation-dependencies>
 				</context>
