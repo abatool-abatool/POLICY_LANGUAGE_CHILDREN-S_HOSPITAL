@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <socio-ethical-policy
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:noNamespaceSchemaLocation="socio-ethical-camera-supermarket.xsd">
+	xsi:noNamespaceSchemaLocation="socio-ethical-camera-children-hospital.xsd">
 	<authorisation-rules id="R1">
 		<rule>
 			<rule-name>Communicate-With-Users</rule-name>
@@ -12,61 +12,11 @@
 					<situation-dependencies>
 						<case>
 							<situation>noisy</situation>
-							<action>Display-Photo<with>High-Pixel-Resolution</with></action>
+							<action>Display-Photo/Video<with>Subtitles</with></action>
 						</case>
 						<case>
 							<situation>quiet</situation>
-							<action>Display-Video<with>Average-Pixel-Resolution</with></action>
-						</case>
-					</situation-dependencies>
-				</context>
-			</case>
-		</rule>
-		<rule>
-			<rule-name>Security-Check-In</rule-name>
-			<device-type>Actuators</device-type>
-			<case>
-				<device>Smart-Camera</device>
-				<context>
-					<situation-dependencies>
-						<case>
-							<situation>crowded</situation>
-							<action-sequence>
-								<action>Detect-Face<with>High-Focus</with></action>
-								<action>Approve-Using-Text</action>
-							</action-sequence>
-						</case>
-						<case>
-							<situation>vaccant</situation>
-							<action-sequence>
-								<action>Detect-Face<with>Average-Focus</with></action>
-								<action>Approve-Using-Voice</action>
-							</action-sequence>              
-						</case>
-					</situation-dependencies>
-				</context>
-			</case>
-		</rule>
-		<rule>
-			<rule-name>Guide-Users</rule-name>
-			<device-type>Actuators</device-type>
-			<case>
-				<device>Smart-Camera</device>
-				<context>
-					<situation-dependencies>
-						<case>
-							<situation>user-is-very-near-to-the-camera</situation>
-							<action-sequence>
-								<action>Alert-User-To-Maintain-Distance</action>
-								<action>Capture-Photo</action>
-							</action-sequence>
-						</case>
-						<case>
-							<situation>user-is-very-far-from-the-camera</situation>
-							<action-sequence>
-								<action>Alert-User-To-Maintain-Distance</action>
-								<action>Capture-Photo</action>
-							</action-sequence>              
+							<action>Display-Photo/Video<without>Subtitles</without></action>
 						</case>
 					</situation-dependencies>
 				</context>
