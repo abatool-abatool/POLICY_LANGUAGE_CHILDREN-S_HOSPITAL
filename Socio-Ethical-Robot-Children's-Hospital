@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <socio-ethical-policy
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:noNamespaceSchemaLocation="socio-ethical-robot-supermarket.xsd">
+	xsi:noNamespaceSchemaLocation="socio-ethical-robot-children-hospital.xsd">
 	<authorisation-rules id="R1">
 		<rule>
 			<rule-name>Communicate-With-Users</rule-name>
@@ -17,31 +17,6 @@
 						<case>
 							<situation>quiet</situation>
 							<action>Communicate-Using-Voice</action>
-						</case>
-					</situation-dependencies>
-				</context>
-			</case>
-		</rule>
-		<rule>
-			<rule-name>Security-Check-In</rule-name>
-			<device-type>Actuators</device-type>
-			<case>
-				<device>Smart-Robot</device>
-				<context>
-					<situation-dependencies>
-						<case>
-							<situation>crowded</situation>
-							<action-sequence>
-								<action>Recognise-Face</action>
-								<action>Display-Message</action>
-							</action-sequence>
-						</case>
-						<case>
-							<situation>vacant</situation>
-							<action-sequence>
-								<action>Recognise-Face</action>
-								<action>Speak-To-Come-In</action>
-							</action-sequence>              
 						</case>
 					</situation-dependencies>
 				</context>
@@ -97,11 +72,11 @@
 						</case>
 						<case>
 							<situation>quiet</situation>
-							<action>Alert-On-Waste-Using-Voice</action>             
+							<action>Alert-On-Floor-Sanitization-<OR>Items-Delivery</OR>-Using-Voice</action>             
 						</case>
 						<case>
 							<situation>vacant</situation>
-							<action>Alert-On-Waste-Using-Voice</action>             
+							<action>Alert-On-Floor-Sanitization-<OR>Items-Delivery</OR>-Using-Voice</action>             
 						</case>
 					</situation-dependencies>
 				</context>
